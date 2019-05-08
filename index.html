@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <meta charset="utf8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="control.js"></script>
+  </head>
+  <body>
+    <div id="box">
+      <div id="picBox"></div>
+      <div id="buttonBlock">
+        <div class="button" id="preButton"><</div>
+        <div class="button" id="addButton">New</div>
+        <div class="button" id="nextButton">></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    c = new Control();
+    document.getElementById("preButton").onclick = function() {
+      c.move(-1);
+    };
+    document.getElementById("nextButton").onclick = function() {
+      c.move(1);
+    };
+    document.getElementById("addButton").onclick = function() {
+      c.appendPicture();
+    };
+  </script>
+</html>
